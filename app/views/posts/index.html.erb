@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>User name</th>
+      <th>User email</th>
       <th>Country</th>
       <th>Province</th>
       <th>District</th>
@@ -26,6 +27,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.user_name %></td>
+        <td><%= post.user.email %></td>
         <td><%= post.country %></td>
         <td><%= post.province %></td>
         <td><%= post.district %></td>
@@ -47,5 +49,5 @@
 </table>
 
 <br>
-
+<%= paginate @posts %>
 <%= link_to 'New Post', new_post_path %>
