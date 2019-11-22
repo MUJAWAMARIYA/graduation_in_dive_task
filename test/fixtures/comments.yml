@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  feedback: MyString
+  your_opnion: MyString
+
+two:
+  feedback: MyString
+  your_opnion: MyString

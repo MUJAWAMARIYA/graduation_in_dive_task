@@ -62,4 +62,5 @@ https://docs.google.com/document/d/1zEGtQu492jLk2SW8q23jgDbChsvJGmf-vhnfUq_Mpbo/
 https://docs.google.com/document/d/1grBLSQ-j9_sTLj75EJ70kJvJuRjhdqZhYAcvQvSNSxc/edit
 
 # the gem will be used
-.kaminary
+  * kaminary
+  * devise

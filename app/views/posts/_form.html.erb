@@ -1,0 +1,82 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_name %>
+    <%= form.text_field :user_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country %>
+    <%= form.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= form.label :province %>
+    <%= form.text_field :province %>
+  </div>
+
+  <div class="field">
+    <%= form.label :district %>
+    <%= form.text_field :district %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sector %>
+    <%= form.text_field :sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cell %>
+    <%= form.text_field :cell %>
+  </div>
+
+  <div class="field">
+    <%= form.label :village %>
+    <%= form.text_field :village %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact %>
+    <%= form.text_field :contact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.select :gender, [ 'Female', 'Male' ], :prompt => 'Select One' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ID_number %>
+    <%= form.text_field :ID_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :post_reason %>
+    <%= form.select :post_reason, [ 'I had loss my Identity card', 'I had found an Identity card ',"other kind of document lost or gotten" ], :prompt => 'Select One' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :confirmation %>
+    <%= form.check_box :confirmation %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

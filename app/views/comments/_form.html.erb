@@ -1,0 +1,27 @@
+<%= form_with(model: comment, local: true) do |form| %>
+  <% if comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :feedback %><%= form.select :feedback, [ 'yes ,i have given my document', 'thank you for your help already got mine ' ], :prompt => 'Select One' %>
+  
+  </div>
+
+  <div class="field">
+    <%= form.label :your_opnion %>
+    <%= form.text_field :your_opnion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -10,9 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_11_22_083252) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string "feedback"
+    t.string "your_opnion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "user_name"
+    t.string "country"
+    t.string "province"
+    t.string "district"
+    t.string "sector"
+    t.string "cell"
+    t.string "village"
+    t.string "contact"
+    t.string "gender"
+    t.string "ID_number"
+    t.date "date"
+    t.string "post_reason"
+    t.boolean "confirmation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "document_type"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password"
+    t.string "password_confirmation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
