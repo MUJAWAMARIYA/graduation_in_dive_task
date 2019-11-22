@@ -10,8 +10,8 @@ Things you may want to cover:
 
 # rails version
   * Rails '5.2.3'
-  # database
-  * postgresql
+# database
+   * postgresql
 
 * System dependencies
 
