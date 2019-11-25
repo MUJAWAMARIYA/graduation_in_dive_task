@@ -10,7 +10,8 @@ class PostsController < ApplicationController
     # @posts =Post.order(:user_name).page params[:page]
 
     @q = Post.ransack(params[:q])
-    @posts = @q.result(distinct: true)
+    @posts = @q.result(distinct: true).page params[:page]
+
   end
 
   # GET /posts/1

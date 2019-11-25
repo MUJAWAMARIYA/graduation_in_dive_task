@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <%= search_form_for @q do |f| %>
 
-  # Search if the name field contains...
+  search by name
   <%= f.label :user_name_cont %>
   <%= f.search_field :user_name_cont %>
 <% if false%>
@@ -13,6 +13,7 @@
   <%= f.label :name_or_description_or_email_or_articles_title_cont %>
   <%= f.search_field :name_or_description_or_email_or_articles_title_cont %>
 <% end %>
+sort by
 <%= sort_link(@q, :user_name) %>
   <%= f.submit %>
 <% end %>
@@ -65,5 +66,5 @@
 </table>
 
 <br>
-
+<%= paginate @posts %>
 <%= link_to 'New Post', new_post_path %>
