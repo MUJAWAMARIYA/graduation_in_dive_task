@@ -62,4 +62,5 @@ https://docs.google.com/document/d/1grBLSQ-j9_sTLj75EJ70kJvJuRjhdqZhYAcvQvSNSxc/
 
 # the gem will be used
   * kaminary
+  * devise
   * ransack
