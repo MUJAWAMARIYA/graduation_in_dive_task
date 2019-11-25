@@ -1,5 +1,21 @@
 <p id="notice"><%= notice %></p>
+<%= search_form_for @q do |f| %>
 
+  # Search if the name field contains...
+  <%= f.label :user_name_cont %>
+  <%= f.search_field :user_name_cont %>
+<% if false%>
+  # Search if an associated articles.title starts with...
+  <%= f.label :articles_title_start %>
+  <%= f.search_field :articles_title_start %>
+
+  # Attributes may be chained. Search multiple attributes for one value...
+  <%= f.label :name_or_description_or_email_or_articles_title_cont %>
+  <%= f.search_field :name_or_description_or_email_or_articles_title_cont %>
+<% end %>
+<%= sort_link(@q, :user_name) %>
+  <%= f.submit %>
+<% end %>
 <h1>Posts</h1>
 
 <table>
@@ -49,5 +65,5 @@
 </table>
 
 <br>
-<%= paginate @posts %>
+
 <%= link_to 'New Post', new_post_path %>

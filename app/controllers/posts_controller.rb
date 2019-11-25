@@ -5,8 +5,12 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
-    @posts =Post.order(:user_name).page params[:page]
+    # @posts = Post.all
+  
+    # @posts =Post.order(:user_name).page params[:page]
+
+    @q = Post.ransack(params[:q])
+    @posts = @q.result(distinct: true)
   end
 
   # GET /posts/1

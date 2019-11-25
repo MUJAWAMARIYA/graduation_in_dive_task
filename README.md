@@ -53,7 +53,7 @@ https://docs.google.com/spreadsheets/d/1Q4J_2iiJebMBw1yzjPvIb0UbPabi2n6a6L6CtX06
 
 # my ERD(entity relationship diagram) of graduation task in dive into code rwanda
 
-https://docs.google.com/document/d/1JNyMtgWsIwLe4d3nOG1ywDMq9YBemDp_D4DPc7Zo460/edit
+https://docs.google.com/document/d/18WWCyaqe_R5RRHsNlF-k3GUCfng3FSD2jHu-Pt07ths/edit
 
 # Screen wire frame (smartphone assumption)
 https://docs.google.com/document/d/1zEGtQu492jLk2SW8q23jgDbChsvJGmf-vhnfUq_Mpbo/edit
