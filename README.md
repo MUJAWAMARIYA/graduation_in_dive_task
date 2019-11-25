@@ -43,7 +43,6 @@ Things you may want to cover:
  * 11.people who are not logged in can not create post
  * 12. manage my project with github and sent to deploy on heroku
 
-
 # my requirement definition for graduaton task 
   # table definition
 https://docs.google.com/spreadsheets/d/1Q4J_2iiJebMBw1yzjPvIb0UbPabi2n6a6L6CtX06l9I/edit#gid=0
