@@ -64,3 +64,4 @@ https://docs.google.com/document/d/1grBLSQ-j9_sTLj75EJ70kJvJuRjhdqZhYAcvQvSNSxc/
   * kaminary
   * devise
   * ransack
+  
