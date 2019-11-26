@@ -45,18 +45,17 @@ Things you may want to cover:
 
 # my requirement definition for graduaton task 
   # table definition
-https://docs.google.com/spreadsheets/d/1Q4J_2iiJebMBw1yzjPvIb0UbPabi2n6a6L6CtX06l9I/edit#gid=0
+https://docs.google.com/spreadsheets/d/1Q4J_2iiJebMBw1yzjPvIb0UbPabi2n6a6L6CtX06l9I/edit?usp=sharing
 
 # my catalog design 
-https://docs.google.com/spreadsheets/d/1Q4J_2iiJebMBw1yzjPvIb0UbPabi2n6a6L6CtX06l9I/edit#gid=0
+https://docs.google.com/spreadsheets/d/1Q4J_2iiJebMBw1yzjPvIb0UbPabi2n6a6L6CtX06l9I/edit?usp=sharing
 
 # my ERD(entity relationship diagram) of graduation task in dive into code rwanda
 
 https://docs.google.com/document/d/18WWCyaqe_R5RRHsNlF-k3GUCfng3FSD2jHu-Pt07ths/edit
 
 # Screen wire frame (smartphone assumption)
-https://docs.google.com/document/d/1zEGtQu492jLk2SW8q23jgDbChsvJGmf-vhnfUq_Mpbo/edit
-
+https://docs.google.com/document/d/11zkkCI3KjfV4jgPBB_d0aAXmJjBorJNP9P1athBhjWs/edit?usp=sharing
 # Screen transition diagram
 https://docs.google.com/document/d/1grBLSQ-j9_sTLj75EJ70kJvJuRjhdqZhYAcvQvSNSxc/edit
 
