@@ -1,0 +1,10 @@
+<ul>
+  <% commentings.each do |commenting| %>
+    <% if commenting.id.present? %>
+      <li>
+        <p><%= commenting.content %></p>
+      </li>
+    <% end %>
+    
+  <% end %>
+</ul>

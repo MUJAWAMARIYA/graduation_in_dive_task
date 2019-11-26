@@ -1,0 +1,22 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <div class="post-text">
+ 
+    <p><strong>Content</strong>：<%= @post.content %></p>
+  </div>
+
+  <p>List of Comments(Contents below are important)</p>
+
+  <!-- Get an HTML id of this comments_area and update only the part of that div -->
+  <div id="comments_area">
+    <!-- Render to display the posted comment list on the posts detail page -->
+    <%= render partial: 'commentings/index', locals: { commentings: @commentings, blog: @post } %>
+  </div>
+
+  <!-- Render to display the comment field on the posts detail page -->
+  <%= render partial: 'commentings/form', locals: { commenting: @commenting, post: @post } %>
+
+  <%= link_to 'Edit', edit_post_path(@blog) %> |
+  <%= link_to 'Return', posts_path %>
+</div>

@@ -17,6 +17,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @commentings = @post.commentings
+    @commenting = @post.commentings.build
   end
 
   # GET /posts/new
@@ -46,7 +48,18 @@ class PostsController < ApplicationController
       end
     end
   end
+#   @post = Post.new(post_params)
 
+#   respond_to do |format|
+#     if @post.save
+#       format.html { redirect_to @post, notice: 'Post was successfully created.' }
+#       format.js { render :index }
+#     else
+#       format.html { render :new }
+#       format.js { render :index }
+#     end
+#   end
+# end
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
@@ -79,6 +92,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:user_name, :country, :province, :district, :sector, :cell, :village, :contact, :gender, :ID_number, :date, :post_reason, :confirmation, :user_id, :id_card_no)
+      params.require(:post).permit(:user_name, :country, :province, :district, :sector, :cell, :village, :contact, :gender, :ID_number, :date, :post_reason, :confirmation, :user_id)
     end
 end

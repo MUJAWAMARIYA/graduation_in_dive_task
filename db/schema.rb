@@ -10,16 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_101927) do
+ActiveRecord::Schema.define(version: 2019_11_25_140210) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "commentings", force: :cascade do |t|
+    t.bigint "post_id"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_commentings_on_post_id"
+  end
 
   create_table "comments", force: :cascade do |t|
     t.string "feedback"
     t.string "your_opnion"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -38,7 +48,6 @@ ActiveRecord::Schema.define(version: 2019_11_25_101927) do
     t.boolean "confirmation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "document_type"
     t.integer "user_id"
   end
 
@@ -50,10 +59,10 @@ ActiveRecord::Schema.define(version: 2019_11_25_101927) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "id_card_no"
-    t.string "id_no"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "commentings", "posts"
+  add_foreign_key "comments", "users"
 end
