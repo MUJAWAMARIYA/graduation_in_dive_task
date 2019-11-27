@@ -24,6 +24,7 @@
   border: 1px solid black;
   outline-style: double;
   outline-color: green;
+  margin-left: 30rem;
  
 }
 
@@ -40,5 +41,52 @@ body {
   }
   .sign_in_up{
      
-      font-size:20px;
+      font-size:10px;
+      padding: 2rem;
+      margin-left: 30rem;
   }
+  .index{
+    
+    width: 500%;
+    font-size: 15px;
+  }
+  .search
+  {
+  
+    font-size: 20px;
+   padding: 3rem;
+   border-style: solid;
+   border-width: 5px;
+   border: 1px solid black;
+   outline-style: double;
+   outline-color: green;
+   background-color: skyblue;
+   height: 100px;
+   margin-bottom: 1rem;
+  }
+  .link{
+
+    font-size: 20px;
+   padding: 3rem;
+   border-style: solid;
+   border-width: 5px;
+   border: 1px solid black;
+   outline-style: double;
+   outline-color: green;
+   background-color: skyblue;
+   width: 400px;
+  
+  }
+  #myindex{
+    background-color: skyblue;
+    border-style: solid;
+  border-width: 5px;
+  border: 1px solid black;
+  outline-style: double;
+  outline-color: green;
+  font-size: 15px;
+  width: 2000%;
+ 
+}
+
+  

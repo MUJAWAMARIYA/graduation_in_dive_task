@@ -17,12 +17,13 @@
   <p class = "alert"><%= alert %></p>
   <div class = 'sign_in_up'>
   <% if signed_in? %>
-  
-  <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+  <div class= "link">
+  <%= link_to "Log_Out", destroy_user_session_path, method: :delete %>
 
-  <%= link_to "comments",  new_comment_path %>
+  <%= link_to "give_feedback",  new_comment_path %>
   <%= link_to "posts",  new_post_path %>
 
+</div>
   <% else %>
   <%= link_to "Sign_up",  new_user_registration_path %>
   

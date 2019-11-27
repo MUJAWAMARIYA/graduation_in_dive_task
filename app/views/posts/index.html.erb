@@ -1,22 +1,16 @@
+<div class="index" id="myindex">
 <p id="notice"><%= notice %></p>
+<div class ="search">
 <%= search_form_for @q do |f| %>
 
-  search by name
-  <%= f.label :user_name_cont %>
-  <%= f.search_field :user_name_cont %>
-<% if false%>
-  # Search if an associated articles.title starts with...
-  <%= f.label :articles_title_start %>
-  <%= f.search_field :articles_title_start %>
-
-  # Attributes may be chained. Search multiple attributes for one value...
-  <%= f.label :name_or_description_or_email_or_articles_title_cont %>
-  <%= f.search_field :name_or_description_or_email_or_articles_title_cont %>
-<% end %>
+  search by :
+  <%= f.label :country_or_user_name_cont %>
+  <%= f.search_field :country_or_user_name_cont %>
 sort by
 <%= sort_link(@q, :user_name) %>
   <%= f.submit %>
 <% end %>
+</div>
 <h1>Posts</h1>
 
 <table>
@@ -57,10 +51,14 @@ sort by
         <td><%= post.date %></td>
         <td><%= post.post_reason %></td>
         <td><%= post.confirmation %></td>
+        <% if signed_in? %>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <% else %>
+        
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>
@@ -69,3 +67,4 @@ sort by
 
 <%= paginate @posts %>
 <%= link_to 'New Post', new_post_path %>
+</div>
