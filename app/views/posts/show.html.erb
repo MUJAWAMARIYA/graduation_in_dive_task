@@ -69,13 +69,13 @@
 
   <!-- Get an HTML id of this commentings_area and update only the part of that div -->
   <div id="commentings_area">
-    <!-- Render to display the posted comment list on the blogs detail page -->
+    <!-- Render to display the posted commenting list on the posts detail page -->
+    
     <%= render partial: 'commentings/index', locals: { commentings: @commentings, post: @post } %>
-    <%= link_to 'Delete this comment', [@commenting.post, @commenting],
-    method: :delete, class: "button btn-danger", data: { confirm: 'Are you sure?' } %>
+   
     </div>
 
-  <!-- Render to display the comment field on the posts detail page -->
+  <!-- Render to display the commentingfield on the posts detail page -->
   <%= render partial: 'commentings/form', locals: { commenting: @commenting, post: @post } %>
  
 <%= link_to 'Edit', edit_post_path(@post) %> |

@@ -51,14 +51,13 @@ sort by
         <td><%= post.date %></td>
         <td><%= post.post_reason %></td>
         <td><%= post.confirmation %></td>
-        <% if signed_in? %>
+      
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <% else %>
         
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    
     <% end %>
   </tbody>
 </table>
@@ -66,5 +65,7 @@ sort by
 <br>
 
 <%= paginate @posts %>
+
 <%= link_to 'New Post', new_post_path %>
+
 </div>

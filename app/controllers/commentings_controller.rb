@@ -13,7 +13,13 @@ class CommentingsController < ApplicationController
       end
     end
   end
-
+  def destroy
+    @post = Post.find(params[:post_id])
+    @commenting = @post.commentings.find(params[:id])
+    @commenting.destroy
+    redirect_to post_path(@post)
+  end
+  
   private
   # Strong parameter
   def commenting_params

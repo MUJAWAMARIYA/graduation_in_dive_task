@@ -3,6 +3,8 @@
     <% if commenting.id.present? %>
       <li>
         <p><%= commenting.content %></p>
+        <%= link_to 'Delete this comment', [commenting.post, commenting],
+        method: :delete, class: "button btn-danger", data: { confirm: 'Are you sure?' } %>
       </li>
     <% end %>
     

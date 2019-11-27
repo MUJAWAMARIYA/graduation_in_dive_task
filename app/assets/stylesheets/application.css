@@ -30,6 +30,9 @@
 
 body {
     background-color: lightblue;
+    width: 100%;
+    position: relative;
+    margin-left: 2rem;
   }
   .header {
     padding: 30px;
@@ -37,7 +40,7 @@ body {
     background: #1abc9c;
     color: white;
     font-size: 30px;
-    width: 500%;
+    width: 100%;
   }
   .sign_in_up{
      
@@ -47,7 +50,7 @@ body {
   }
   .index{
     
-    width: 500%;
+    width: 200%;
     font-size: 15px;
   }
   .search
@@ -85,7 +88,7 @@ body {
   outline-style: double;
   outline-color: green;
   font-size: 15px;
-  width: 2000%;
+  width: 450%;
  
 }
 
