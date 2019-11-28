@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authorize
-  before_action :check_admin, only: [:destroy]
+   before_action :check_admin, only: [:destroy, :edit]
 
   # GET /posts
   # GET /posts.json
@@ -14,6 +14,10 @@ class PostsController < ApplicationController
     @posts = @q.result(distinct: true).page params[:page]
 
   end
+  def home
+    @posts = Post.all
+    
+   end
 
   # GET /posts/1
   # GET /posts/1.json
@@ -97,7 +101,7 @@ class PostsController < ApplicationController
     end
 
     def check_admin
-      if current_user && current_user.admin?
+      unless current_user && current_user.admin? 
         redirect_to posts_path, notice: "only admin can access"
 
       end

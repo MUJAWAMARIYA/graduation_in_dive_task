@@ -18,7 +18,7 @@
     border-radius: 10px;
     font-size: 20px;
     margin: 30px;
-    width: 100%;
+    width: 50%;
     border-style: solid;
   border-width: 5px;
   border: 1px solid black;
@@ -31,8 +31,7 @@
 body {
     background-color: lightblue;
     width: 100%;
-    position: relative;
-    margin-left: 2rem;
+    margin-left: 0
   }
   .header {
     padding: 30px;
@@ -41,31 +40,30 @@ body {
     color: white;
     font-size: 30px;
     width: 100%;
+    
+  
   }
   .sign_in_up{
-     
-      font-size:10px;
-      padding: 2rem;
-      margin-left: 30rem;
+    
+      font-size:20px;
+    
+      
   }
   .index{
     
-    width: 200%;
-    font-size: 15px;
+  
+   
   }
-  .search
+  .searchs
   {
   
     font-size: 20px;
-   padding: 3rem;
-   border-style: solid;
-   border-width: 5px;
-   border: 1px solid black;
-   outline-style: double;
-   outline-color: green;
+  
+   
    background-color: skyblue;
-   height: 100px;
-   margin-bottom: 1rem;
+   margin-bottom: 3rem;
+  
+   float: right;
   }
   .link{
 
@@ -77,7 +75,7 @@ body {
    outline-style: double;
    outline-color: green;
    background-color: skyblue;
-   width: 400px;
+   
   
   }
   #myindex{
@@ -87,9 +85,20 @@ body {
   border: 1px solid black;
   outline-style: double;
   outline-color: green;
-  font-size: 15px;
-  width: 450%;
- 
-}
+  
+  
 
+}
+.footer{
+  padding: 30px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+  width: 100%;
+  margin-top: 10.5rem;;
+}
+table th{
+  background-color: green;
+}
   

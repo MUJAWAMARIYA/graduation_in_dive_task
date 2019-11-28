@@ -1,6 +1,7 @@
 <div class="index" id="myindex">
 <p id="notice"><%= notice %></p>
-<div class ="search">
+
+<div class ="searchs">
 <%= search_form_for @q do |f| %>
 
   search by :
@@ -11,9 +12,9 @@ sort by
   <%= f.submit %>
 <% end %>
 </div>
-<h1>Posts</h1>
+<h1>Get registered here</h1>
 
-<table>
+<table border="1">
   <thead>
     <tr>
       <th>User name</th>
@@ -30,6 +31,7 @@ sort by
       <th>Date</th>
       <th>Post reason</th>
       <th>Confirmation</th>
+    
       <th colspan="3"></th>
     </tr>
   </thead>
