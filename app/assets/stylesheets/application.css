@@ -46,6 +46,7 @@ body {
   .sign_in_up{
     
       font-size:20px;
+    text-align: center;
     
       
   }
@@ -72,6 +73,7 @@ body {
    outline-color: green;
    background-color: skyblue;
    width: 100%;
+  
   
   }
   #myindex{
@@ -107,9 +109,30 @@ outline-style: double;
 outline-color: green;
 }
 P{
-  color: #1abc9c;
+  color:black;
   text-align: center;
   font-size: 30px;
   font-family: 'Courier New', Courier, monospace;
 }
+.form{
+  background-color: #1abc9c;
+  margin-left: 7rem;
+  font-size: 20px;;
+  width: 60%;
+  padding: 4rem;
+}
+.show{
   
+  background-color: skyblue;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 30px;
+  width: 90%;
+  border-style: solid;
+border-width: 5px;
+border: 1px solid black;
+outline-style: double;
+outline-color: green;
+margin-left: 7rem;
+color: black;
+}

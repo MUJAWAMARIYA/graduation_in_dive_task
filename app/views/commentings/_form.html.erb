@@ -1,3 +1,4 @@
+<div class=" form">
 <%= form_with(model: [post, commenting]) do |form| %>
     <% if commenting.errors.any? %>
       <div id="error_explanation">
@@ -19,3 +20,4 @@
       <%= form.submit %>
     </div>
   <% end %>
+  </div>
