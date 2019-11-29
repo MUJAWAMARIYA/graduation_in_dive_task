@@ -30,7 +30,7 @@
 
 body {
     background-color: lightblue;
-    width: 100%;
+    width: 110%;
     margin-left: 0
   }
   .header {
@@ -49,11 +49,7 @@ body {
     
       
   }
-  .index{
-    
   
-   
-  }
   .searchs
   {
   
@@ -75,7 +71,7 @@ body {
    outline-style: double;
    outline-color: green;
    background-color: skyblue;
-   
+   width: 100%;
   
   }
   #myindex{
@@ -100,5 +96,20 @@ body {
 }
 table th{
   background-color: green;
+}
+.myhome{
+  
+  width: 100%;
+  border-style: solid;
+border-width: 5px;
+border: 1px solid black;
+outline-style: double;
+outline-color: green;
+}
+P{
+  color: #1abc9c;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
 }
   
