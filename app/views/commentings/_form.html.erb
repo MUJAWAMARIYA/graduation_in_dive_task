@@ -1,23 +1,6 @@
-<div class=" form">
-<%= form_with(model: [post, commenting]) do |form| %>
-    <% if commenting.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(commenting.errors.count, "error") %> prohibited this comment from being saved:</h2>
-        <ul>
-        <% commenting.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
+<%= form_for ([@post, @post.commentings.build]) do |f| %><%= f.text_area :content, class:"single-input", placeholder:"enter commenting"%>
+  <%= f.submit "post commenting", class:"genric-btn info-border circle" %>
   
-    <div class="field">
-      <%= form.label :content %>
-      <%= form.text_area :content,class: "form-control" %>
-    </div>
   
-    <div class="actions">
-      <%= form.submit %>
-    </div>
-  <% end %>
-  </div>
+  
+    <%end%> 

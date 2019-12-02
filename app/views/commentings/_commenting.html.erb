@@ -1,0 +1,14 @@
+<ul>
+  <% @commentings.each do |commenting| %>
+    <% if commenting.id.present? %>
+      <li>
+        <p><br><%= commenting.content %><br>
+       
+        <%= link_to "delete", [commenting.post, commenting], method: :delete, class:"genric-btn danger-border circle" %>
+        <%= link_to "edit ", edit_post_commenting_path(commenting.post, commenting), class:"genric-btn success-border circle" %></p>
+        </li>
+  
+    <% end %>
+  <% end %>
+<%= render 'commentings/form'%>
+</ul> 

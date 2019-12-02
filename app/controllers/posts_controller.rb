@@ -3,8 +3,7 @@ class PostsController < ApplicationController
   before_action :authorize
    before_action :check_admin, only: [:destroy, :edit]
 
-  # GET /posts
-  # GET /posts.json
+  
   def index
     # @posts = Post.all
   
@@ -19,26 +18,25 @@ class PostsController < ApplicationController
     
    end
 
-  # GET /posts/1
-  # GET /posts/1.json
+ 
   def show
-    @commentings = @post.commentings
-    @commenting = @post.commentings.build
+    # @commentings = @post.commentings
+    # @commenting = @post.commentings.build
+    @commentings = Commenting.where(post_id: @post)
   end
 
-  # GET /posts/new
+
   def new
         
     @post = current_user.posts.build
     @post = Post.new
   end
 
-  # GET /posts/1/edit
+ 
   def edit
   end
 
-  # POST /posts
-  # POST /posts.json
+ 
   def create
     @post = current_user.posts.build(post_params)
     # @post = Post.new(post_params)
@@ -64,9 +62,7 @@ class PostsController < ApplicationController
 #       format.js { render :index }
 #     end
 #   end
-# end
-  # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
+
   def update
     respond_to do |format|
       if @post.update(post_params)
@@ -79,8 +75,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post.destroy
     respond_to do |format|
@@ -97,7 +91,7 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:user_name, :country, :province, :district, :sector, :cell, :village, :telephone_number, :gender, :ID_number, :lost_id_date_or_found_id_date, :post_reason, :confirmation, :property_name, :user_id)
+      params.require(:post).permit(:user_name, :country, :province, :district, :sector, :cell, :village, :telephone_number, :gender, :ID_number, :lost_id_date_or_found_id_date, :post_reason, :confirmation, :property_name,  :commentin_id, :user_id)
     end
 
     def check_admin
