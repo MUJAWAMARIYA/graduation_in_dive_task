@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authorize
+   before_action :check_admin, only: [:destroy, :edit]
 
   # GET /posts
   # GET /posts.json
@@ -13,6 +14,10 @@ class PostsController < ApplicationController
     @posts = @q.result(distinct: true).page params[:page]
 
   end
+  def home
+    @posts = Post.all
+    
+   end
 
   # GET /posts/1
   # GET /posts/1.json
@@ -92,6 +97,14 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:user_name, :country, :province, :district, :sector, :cell, :village, :contact, :gender, :ID_number, :date, :post_reason, :confirmation, :user_id)
+      params.require(:post).permit(:user_name, :country, :province, :district, :sector, :cell, :village, :telephone_number, :gender, :ID_number, :lost_id_date_or_found_id_date, :post_reason, :confirmation, :property_name, :user_id)
+    end
+
+    def check_admin
+      unless current_user && current_user.admin? 
+        redirect_to posts_path, notice: "only admin can access"
+
+      end
+    
     end
 end

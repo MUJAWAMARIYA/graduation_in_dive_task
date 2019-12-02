@@ -18,27 +18,133 @@
     border-radius: 10px;
     font-size: 20px;
     margin: 30px;
-    width: 100%;
+    width: 50%;
     border-style: solid;
   border-width: 5px;
   border: 1px solid black;
   outline-style: double;
   outline-color: green;
+  margin-left: 30rem;
  
 }
 
 body {
     background-color: lightblue;
+    width: 125%;
+    margin-left: 0
   }
   .header {
     padding: 30px;
     text-align: center;
     background: #1abc9c;
     color: white;
-    font-size: 30px;
-    width: 500%;
+    font-size: 20px;
+    width: 100%;
+    font-family: fantasy;
   }
   .sign_in_up{
-     
+    
       font-size:20px;
+    text-align: center;
+    
+      
   }
+  
+  .searchs
+  {
+  
+    font-size: 20px;
+  
+   
+   background-color: skyblue;
+   margin-bottom: 3rem;
+  
+   float: right;
+  }
+  .link{
+
+    font-size: 20px;
+   padding: 3rem;
+   border-style: solid;
+   border-width: 5px;
+   border: 1px solid black;
+   outline-style: double;
+   outline-color: green;
+   background-color: skyblue;
+   width: 100%;
+  
+  
+  }
+  #myindex{
+    background-color: skyblue;
+    border-style: solid;
+  border-width: 5px;
+  border: 1px solid black;
+  outline-style: double;
+  outline-color: green;
+
+}
+.footer{
+  padding: 30px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+  width: 100%;
+  margin-top: 10.5rem;;
+  font-family: fantasy;
+}
+table th{
+  background-color: green;
+}
+.myhome{
+  
+  width: 100%;
+  border-style: solid;
+border-width: 5px;
+border: 1px solid black;
+outline-style: double;
+outline-color: green;
+background-color: lightblue;
+}
+P{
+  color:black;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.form{
+  background-color: #1abc9c;
+  margin-left: 7rem;
+  font-size: 20px;;
+  width: 60%;
+  padding: 4rem;
+}
+.show{
+  
+  background-color: skyblue;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 30px;
+  width: 90%;
+  border-style: solid;
+border-width: 5px;
+border: 1px solid black;
+outline-style: double;
+outline-color: green;
+margin-left: 7rem;
+color: black;
+}
+h1{
+  margin-left: 24rem;
+}
+.log{
+  width: 10%;
+
+  border-radius: 30%;
+}
+.image{
+  margin-left: 6rem;
+  width:70%;
+
+}

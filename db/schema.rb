@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_140210) do
+ActiveRecord::Schema.define(version: 2019_12_02_090901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,9 @@ ActiveRecord::Schema.define(version: 2019_11_25_140210) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.string "name"
+    t.string "email"
+    t.date "found_id_date"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
@@ -40,15 +43,16 @@ ActiveRecord::Schema.define(version: 2019_11_25_140210) do
     t.string "sector"
     t.string "cell"
     t.string "village"
-    t.string "contact"
     t.string "gender"
     t.string "ID_number"
-    t.date "date"
+    t.date "lost_id_date_or_found_id_date"
     t.string "post_reason"
     t.boolean "confirmation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.string "property_name"
+    t.string "telephone_number"
   end
 
   create_table "users", force: :cascade do |t|
@@ -59,6 +63,7 @@ ActiveRecord::Schema.define(version: 2019_11_25_140210) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

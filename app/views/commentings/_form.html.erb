@@ -1,3 +1,4 @@
+<div class=" form">
 <%= form_with(model: [post, commenting]) do |form| %>
     <% if commenting.errors.any? %>
       <div id="error_explanation">
@@ -12,10 +13,11 @@
   
     <div class="field">
       <%= form.label :content %>
-      <%= form.text_area :content %>
+      <%= form.text_area :content,class: "form-control" %>
     </div>
   
     <div class="actions">
       <%= form.submit %>
     </div>
   <% end %>
+  </div>

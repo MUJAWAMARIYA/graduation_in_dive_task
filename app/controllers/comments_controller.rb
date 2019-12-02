@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
-
+  before_action :authorize
+  before_action :check_admin, only: [:destroy, :edit]
   # GET /comments
   # GET /comments.json
   def index
@@ -73,6 +74,13 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:feedback, :your_opnion, :user_id)
+      params.require(:comment).permit(:name, :email , :found_id_date, :feedback, :user_id)
+    end
+    def check_admin
+      unless current_user && current_user.admin? 
+        redirect_to comments_path, notice: "only admin has permission"
+
+      end
+    
     end
 end

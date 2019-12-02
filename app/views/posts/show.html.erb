@@ -1,3 +1,4 @@
+<div class="show">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -36,8 +37,8 @@
 </p>
 
 <p>
-  <strong>Contact:</strong>
-  <%= @post.contact %>
+  <strong>telephone_number:</strong>
+  <%= @post.telephone_number %>
 </p>
 
 <p>
@@ -51,8 +52,8 @@
 </p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @post.date %>
+  <strong>lost_id_date_or_found_id_date</strong>
+  <%= @post.lost_id_date_or_found_id_date%>
 </p>
 
 <p>
@@ -69,14 +70,15 @@
 
   <!-- Get an HTML id of this commentings_area and update only the part of that div -->
   <div id="commentings_area">
-    <!-- Render to display the posted comment list on the blogs detail page -->
+    <!-- Render to display the posted commenting list on the posts detail page -->
+    
     <%= render partial: 'commentings/index', locals: { commentings: @commentings, post: @post } %>
-    <%= link_to 'Delete this comment', [@commenting.post, @commenting],
-    method: :delete, class: "button btn-danger", data: { confirm: 'Are you sure?' } %>
+   
     </div>
 
-  <!-- Render to display the comment field on the posts detail page -->
+  <!-- Render to display the commentingfield on the posts detail page -->
   <%= render partial: 'commentings/form', locals: { commenting: @commenting, post: @post } %>
  
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+</div>

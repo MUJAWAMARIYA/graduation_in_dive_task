@@ -1,25 +1,20 @@
+<div class="index" id="myindex">
 <p id="notice"><%= notice %></p>
+
+<div class ="searchs">
 <%= search_form_for @q do |f| %>
 
-  search by name
-  <%= f.label :user_name_cont %>
-  <%= f.search_field :user_name_cont %>
-<% if false%>
-  # Search if an associated articles.title starts with...
-  <%= f.label :articles_title_start %>
-  <%= f.search_field :articles_title_start %>
-
-  # Attributes may be chained. Search multiple attributes for one value...
-  <%= f.label :name_or_description_or_email_or_articles_title_cont %>
-  <%= f.search_field :name_or_description_or_email_or_articles_title_cont %>
-<% end %>
+  search by :
+  <%= f.label :country_or_user_name_cont %>
+  <%= f.search_field :country_or_user_name_cont %>
 sort by
 <%= sort_link(@q, :user_name) %>
   <%= f.submit %>
 <% end %>
-<h1>Posts</h1>
+</div>
+<h2>Get registered here</h2>
 
-<table>
+<table border="1">
   <thead>
     <tr>
       <th>User name</th>
@@ -30,12 +25,14 @@ sort by
       <th>Sector</th>
       <th>Cell</th>
       <th>Village</th>
-      <th>Contact</th>
+      <th>telephone_number</th>
       <th>Gender</th>
       <th>Id number</th>
-      <th>Date</th>
+      <th>lost_id_date_or_found_id_date</th>
       <th>Post reason</th>
+      <th>property_name</th>
       <th>Confirmation</th>
+    
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -51,16 +48,20 @@ sort by
         <td><%= post.sector %></td>
         <td><%= post.cell %></td>
         <td><%= post.village %></td>
-        <td><%= post.contact %></td>
+        <td><%= post.telephone_number %></td>
         <td><%= post.gender %></td>
         <td><%= post.ID_number %></td>
-        <td><%= post.date %></td>
+        <td><%= post.lost_id_date_or_found_id_date %></td>
         <td><%= post.post_reason %></td>
+        <td><%= post.property_name%></td>
         <td><%= post.confirmation %></td>
+      
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+    
     <% end %>
   </tbody>
 </table>
@@ -68,4 +69,7 @@ sort by
 <br>
 
 <%= paginate @posts %>
+
 <%= link_to 'New Post', new_post_path %>
+
+</div>

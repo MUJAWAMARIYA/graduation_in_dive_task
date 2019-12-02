@@ -1,3 +1,4 @@
+<div class= "form">
 <%= form_with(model: post, local: true) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
@@ -13,42 +14,42 @@
 
   <div class="field">
     <%= form.label :user_name %>
-    <%= form.text_field :user_name %>
+    <%= form.text_field :user_name ,class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :country %>
-    <%= form.text_field :country %>
+    <%= form.text_field :country, class: "form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :province %>
-    <%= form.text_field :province %>
+    <%= form.text_field :province ,class: "form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :district %>
-    <%= form.text_field :district %>
+    <%= form.text_field :district,class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :sector %>
-    <%= form.text_field :sector %>
+    <%= form.text_field :sector ,class: "form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :cell %>
-    <%= form.text_field :cell %>
+    <%= form.text_field :cell, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :village %>
-    <%= form.text_field :village %>
+    <%= form.text_field :village , class: "form-control"%>
   </div>
 
   <div class="field">
-    <%= form.label :contact %>
-    <%= form.text_field :contact %>
+    <%= form.label :telephone_number %>
+    <%= form.text_field :telephone_number ,class: "form-control"%>
   </div>
 
   <div class="field">
@@ -58,18 +59,24 @@
 
   <div class="field">
     <%= form.label :ID_number %>
-    <%= form.text_field :ID_number %>
+    <%= form.text_field :ID_number ,class: "form-control"%>
   </div>
 
   <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
+    <%= form.label :lost_id_date_or_found_id_date%>
+    <%= form.date_select :lost_id_date_or_found_id_date,class: "form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :post_reason %>
     <%= form.select :post_reason, [ 'I had loss my Identity card', 'I had found an Identity card ',"other kind of document lost or gotten" ], :prompt => 'Select One' %>
   </div>
+
+  <div class="field">
+    <%= form.label :property_name%>
+    <%= form.text_field :property_name,class: "form-control"%>
+  </div>
+
 
   <div class="field">
     <%= form.label :confirmation %>

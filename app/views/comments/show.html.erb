@@ -1,14 +1,30 @@
+<div class="show">
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Your name:</strong>
+  <%= @comment.name%>
+</p>
+
+<p>
+  <strong>Your email</strong>
+  <%= @comment.email %>
+</p>
 <p>
   <strong>Feedback:</strong>
   <%= @comment.feedback %>
 </p>
 
+
+
 <p>
-  <strong>Your opnion:</strong>
-  <%= @comment.your_opnion %>
+  <strong>found_id_date:</strong>
+  <%= @comment.found_id_date%>
 </p>
+
+
+
 
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
 <%= link_to 'Back', comments_path %>
+</div>
