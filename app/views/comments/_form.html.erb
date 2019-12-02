@@ -15,20 +15,23 @@
     <%= form.label :feedback %><%= form.select :feedback, [ 'yes ,i have given my document', 'thank you for your help already got mine ' ], :prompt => 'Select One' %>
   
   </div>
-  <div class="field">
-    <%= form.label :found_id_date%>
-    <%= form.date_select :found_id_date,class: "form-control"%>
-  </div>
+ 
   <div class="field">
     <%= form.label :name%>
     <%= form.text_field :name ,class: "form-control"%>
   </div>
+ 
 
   <div class="field">
     <%= form.label :email %>
     <%= form.text_field :email, class: "form-control"%>
   </div>
 
+  
+  <div class="field">
+  <%= form.label :found_id_date%>
+  <%= form.date_select :found_id_date,class: "form-control"%>
+</div>
   <div class="actions">
     <%= form.submit %>
   </div>
