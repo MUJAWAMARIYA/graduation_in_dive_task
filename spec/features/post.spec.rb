@@ -27,6 +27,8 @@ scenario "Test post list" do
    fill_in  'country' ,  with: 'testtest'
    click_on 'Create  Post'
    expect(page).to have_content 'testtest'
+   expect(page).to have_content 'grettings'
+
 end
 
  # visit to tasks_path (transition to task list page)
