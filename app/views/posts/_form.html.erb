@@ -48,8 +48,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :contact %>
-    <%= form.text_field :contact ,class: "form-control"%>
+    <%= form.label :telephone_number %>
+    <%= form.text_field :telephone_number ,class: "form-control"%>
   </div>
 
   <div class="field">
@@ -63,14 +63,20 @@
   </div>
 
   <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date ,class: "form-control"%>
+    <%= form.label :lost_id_date_or_found_id_date%>
+    <%= form.date_select :lost_id_date_or_found_id_date,class: "form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :post_reason %>
     <%= form.select :post_reason, [ 'I had loss my Identity card', 'I had found an Identity card ',"other kind of document lost or gotten" ], :prompt => 'Select One' %>
   </div>
+
+  <div class="field">
+    <%= form.label :property_name%>
+    <%= form.text_field :property_name,class: "form-control"%>
+  </div>
+
 
   <div class="field">
     <%= form.label :confirmation %>
