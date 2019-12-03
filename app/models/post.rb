@@ -5,7 +5,7 @@ class Post < ApplicationRecord
 
 
     validates :user_name, :country, presence: true
-     validates  :user_name, :country, :province, :district, :sector, :cell, :village, :telephone_number, :gender, :ID_number, :lost_id_date_or_found_id_date, :post_reason, :confirmation, :property_name, presence: true
+     validates  :user_name, :country, :province, :district, :sector, :cell, :village, :gender, :ID_number, :lost_id_date_or_found_id_date, :post_reason, :confirmation, :property_name, presence: true
 
      validates :ID_number, length: { is: 16 }, allow_blank: true
    
