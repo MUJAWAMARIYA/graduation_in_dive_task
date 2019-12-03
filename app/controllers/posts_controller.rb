@@ -66,7 +66,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:user_name, :country, :province, :district, :sector, :cell, :village, :telephone_number, :gender, :ID_number, :lost_id_date_or_found_id_date, :post_reason, :confirmation, :property_name, :user_id)
+      params.require(:post).permit(:user_name, :country, :province, :district, :sector, :telephone_number, :gender, :ID_number, :lost_id_date_or_found_id_date, :post_reason,  :property_name,  :confirmation, :cell, :village, :user_id)
     end
 
     def check_admin

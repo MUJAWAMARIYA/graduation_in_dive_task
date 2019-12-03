@@ -17,14 +17,11 @@ sort by
 <table border="1">
   <thead>
     <tr>
-      <th>User name</th>
-      <th>User email</th>
+    <th>user_name</th>
       <th>Country</th>
       <th>Province</th>
       <th>District</th>
       <th>Sector</th>
-      <th>Cell</th>
-      <th>Village</th>
       <th>telephone_number</th>
       <th>Gender</th>
       <th>Id number</th>
@@ -41,13 +38,11 @@ sort by
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.user_name %></td>
-        <td><%= post.user.email %></td>
+        
         <td><%= post.country %></td>
         <td><%= post.province %></td>
         <td><%= post.district %></td>
         <td><%= post.sector %></td>
-        <td><%= post.cell %></td>
-        <td><%= post.village %></td>
         <td><%= post.telephone_number %></td>
         <td><%= post.gender %></td>
         <td><%= post.ID_number %></td>
