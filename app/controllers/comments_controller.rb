@@ -48,7 +48,7 @@ class CommentsController < ApplicationController
        
       end
     end
-  end
+  
 
  
   def destroy
@@ -79,4 +79,4 @@ end
       end
     
     end
-end
+
