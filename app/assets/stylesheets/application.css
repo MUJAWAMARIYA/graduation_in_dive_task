@@ -24,14 +24,14 @@
   border: 1px solid black;
   outline-style: double;
   outline-color: green;
-  margin-left: 30rem;
+  margin-left: 20rem;
  
 }
 
 body {
     background-color: lightblue;
-    width: 125%;
-    margin-left: 0
+    width: 100%;
+    position: relative;
   }
   .header {
     padding: 30px;
@@ -129,7 +129,7 @@ P{
   border-radius: 10px;
   font-size: 20px;
   margin: 30px;
-  width: 90%;
+  width: 60%;
   border-style: solid;
 border-width: 5px;
 border: 1px solid black;
@@ -146,8 +146,8 @@ h1{
 
   border-radius: 30%;
 }
-.image{
-  margin-left: 10rem;
-  width:70%;
+.imagee{
+width: 90%;
+margin-left: 4rem;
 
 }
