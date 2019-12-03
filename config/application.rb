@@ -29,6 +29,5 @@ module MygraduationTask
     g.fixture_replacement :factory_bot, dir: "spec/factories"
   end
 end
-I18n.config.available_locales = :ja
-I18n.default_locale = :ja
+
 end
