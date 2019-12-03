@@ -84,6 +84,8 @@ body {
   outline-style: double;
   outline-color: green;
   font-family: fantasy;
+  width: 100%;
+  
 
 }
 .footer{
@@ -96,8 +98,13 @@ body {
   margin-top: 10.5rem;;
   font-family: fantasy;
 }
+table{
+  width: 80%;
+ 
+}
 table th{
   background-color: green;
+
 }
 .myhome{
   
@@ -122,6 +129,7 @@ P{
   font-size: 20px;;
   width: 60%;
   padding: 4rem;
+  width: 100%;
 }
 .show{
   

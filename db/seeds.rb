@@ -26,8 +26,8 @@ User.create!(email: 'ment21orbbb@gmail.com', password: '1234567nn',password_conf
 User.create!(email: 'mento22rbbb@gmail.com', password: '1234567nn',password_confirmation: '1234567nn', admin: 'false')
 User.create!(email: 'mentorb23bb@gmail.com', password: '1234567nn',password_confirmation: '1234567nn', admin: 'false')
 User.create!(email: 'mento24rbbb@gmail.com', password: '1234567nn',password_confirmation: '1234567nn', admin: 'false')
+User.create!(email: 'margrate@gmail.com', password: "1111111",password_confirmation: '1111111', admin: 'true')
 
-User.create!(email: 'margoo@gmail.com', password: '0000000',password_confirmation: '0000000', admin: 'true)
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
