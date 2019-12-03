@@ -1,7 +1,7 @@
 
 # User.create!(email: 'tetas@gmail.com', password: '1234567',password_confirmation: '1234567', admin: 'false')
 
-User.create!(email: 'mentorbbb1@gmail.com', password: '1234567nn',password_confirmation: '1234567nn', admin: 'false')
+User.create!(email: 'mumargo@gmail.com', password: '1234567',password_confirmation: '1234567', admin: 'true')
 User.create!(email: 'mentorbbb2@gmail.com', password: '1234567nn',password_confirmation: '1234567nn', admin: 'false')
 User.create!(email: 'mentorbbb3@gmail.com', password: '1234567nn',password_confirmation: '1234567nn', admin: 'false')
 User.create!(email: 'mentorbbb4@gmail.com', password: '1234567nn',password_confirmation: '1234567nn', admin: 'false')
