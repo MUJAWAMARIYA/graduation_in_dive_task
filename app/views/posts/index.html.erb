@@ -5,8 +5,8 @@
 <%= search_form_for @q do |f| %>
 
   search by :
-  <%= f.label :country_or_user_name_cont %>
-  <%= f.search_field :country_or_user_name_cont %>
+  <%= f.label :ID_number_or_user_name_cont %>
+  <%= f.search_field :ID_number_or_user_name_cont %>
 sort by
 <%= sort_link(@q, :user_name) %>
   <%= f.submit %>
