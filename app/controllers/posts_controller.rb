@@ -3,11 +3,8 @@ class PostsController < ApplicationController
   before_action :authorize
    before_action :check_admin, only: [:destroy, :edit]
 
-  
   def index
-    # @posts = Post.all
   
-    # @posts =Post.order(:user_name).page params[:page]
 
     @q = Post.ransack(params[:q])
     @posts = @q.result(distinct: true).page params[:page]
@@ -18,11 +15,10 @@ class PostsController < ApplicationController
     
    end
 
- 
+
   def show
-     @commentings = @post.commentings
-     @commenting = @post.commentings.build
-    @commentings = Commenting.where(post_id: @post)
+    @commentings = @post.commentings
+    @commenting = @post.commentings.build
   end
 
 
@@ -32,41 +28,26 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
- 
   def edit
   end
 
- 
+
   def create
     @post = current_user.posts.build(post_params)
-    # @post = Post.new(post_params)
 
-   
+
+ 
       if @post.save
-         redirect_to @post, notice: 'Post was successfully created.' 
-   
+        redirect_to @post, notice: 'Post was successfully created.' 
       else
        render :new 
-
-      end
     end
   end
-#   @post = Post.new(post_params)
-
-#   respond_to do |format|
-#     if @post.save
-#       format.html { redirect_to @post, notice: 'Post was successfully created.' }
-#       format.js { render :index }
-#     else
-#       format.html { render :new }
-#       format.js { render :index }
-#     end
-#   end
 
   def update
     
       if @post.update(post_params)
-  redirect_to @post, notice: 'Post was successfully updated.' 
+         redirect_to @post, notice: 'Post was successfully updated.' 
       else
        render :edit 
     end
@@ -74,28 +55,26 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-  
-     redirect_to posts_url, notice: 'Post was successfully destroyed.' 
+   
+       redirect_to posts_url, notice: 'Post was successfully destroyed.' 
     
- 
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    
     def set_post
       @post = Post.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:user_name, :country, :province, :district, :sector, :cell, :village, :telephone_number, :gender, :ID_number, :lost_id_date_or_found_id_date, :post_reason, :confirmation, :property_name,  :commentin_id, :user_id)
+      params.require(:post).permit(:user_name, :country, :province, :district, :sector, :cell, :village, :telephone_number, :gender, :ID_number, :lost_id_date_or_found_id_date, :post_reason, :confirmation, :property_name, :user_id)
     end
 
     def check_admin
       unless current_user && current_user.admin? 
         redirect_to posts_path, notice: "only admin can access"
 
-      
+      end
     
     end
 end

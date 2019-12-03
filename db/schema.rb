@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_082956) do
+ActiveRecord::Schema.define(version: 2019_12_03_100915) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 2019_12_03_082956) do
 
   create_table "comments", force: :cascade do |t|
     t.string "feedback"
-    t.string "your_opnion"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
@@ -45,7 +44,7 @@ ActiveRecord::Schema.define(version: 2019_12_03_082956) do
     t.string "village"
     t.string "gender"
     t.string "ID_number"
-    t.date "lost_id_date_or_found_id_date"
+    t.date "date"
     t.string "post_reason"
     t.boolean "confirmation"
     t.datetime "created_at", null: false
@@ -53,6 +52,8 @@ ActiveRecord::Schema.define(version: 2019_12_03_082956) do
     t.integer "user_id"
     t.string "property_name"
     t.string "telephone_number"
+    t.string "contact"
+    t.date "lost_id_date_or_found_id_date"
   end
 
   create_table "users", force: :cascade do |t|
