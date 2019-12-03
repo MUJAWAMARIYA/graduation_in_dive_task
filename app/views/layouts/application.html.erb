@@ -25,16 +25,18 @@
   <%= link_to "give_feedback",  comments_path, class: "btn btn-danger" %>
   <%= link_to "posts",  posts_path , class: "btn btn-danger" %>
 
+  <h1><%= t 'welcome' %></h1>
+
 </div>
   <% else %>
-  <%= link_to "Sign_up",  new_user_registration_path %>
+  <%= link_to "Sign_up",  new_user_registration_path , class: "btn btn-danger"%>
   
-  <%= link_to "Sign_In",  new_user_session_path %>
+  <%= link_to "Sign_In",  new_user_session_path , class: "btn btn-danger"%>
   
  <% end %>
  </div>
  
- <h1><%= t 'welcome' %></h1>
+ 
  
     <%= yield %>
 

@@ -20,8 +20,8 @@ class PostsController < ApplicationController
 
  
   def show
-    # @commentings = @post.commentings
-    # @commenting = @post.commentings.build
+     @commentings = @post.commentings
+     @commenting = @post.commentings.build
     @commentings = Commenting.where(post_id: @post)
   end
 

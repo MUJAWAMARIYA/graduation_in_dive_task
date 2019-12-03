@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-  before_action :set_commenting, only: [:show, :edit, :update, :destroy]
+  before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  
   before_action :authorize
   before_action :check_admin, only: [:destroy, :edit]
  
@@ -8,7 +9,7 @@ class CommentsController < ApplicationController
   end
 
   def show
-    
+    @comment= Comment.find(params[:id])
   end
 
 
@@ -51,14 +52,18 @@ class CommentsController < ApplicationController
 
  
   def destroy
-    @comment.destroy
-    respond_to do |format|
-      format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+    
+      @comment.destroy
+      respond_to do |format|
+        format.html { redirect_to comments_path }
+        format.json { head :no_content }
+      end
+end
 
   private
+  def set_comment
+    @comment = Comment.find(params[:id])
+  end
    
     def set_commenting
       @commenting = Commenting.find(params[:id])
@@ -66,7 +71,7 @@ class CommentsController < ApplicationController
 
    
     def comment_params
-      params.require(:comment).permit(:name, :email , :found_id_date, :feedback, :user_id)
+      params.require(:comment).permit(:name, :email , :found_id_date, :feedback, :user_id, :commenting_id)
     end
     def check_admin
       unless current_user && current_user.admin? 

@@ -1,5 +1,5 @@
 class CommentingsController < ApplicationController
-  
+  before_action :check_admin, only: [:destroy, :edit]
   before_action :find_post
   before_action :find_commenting, only: [:destroy, :edit , :update]
   def create
@@ -34,5 +34,12 @@ end
 
 def find_commenting
   @commenting = @post.commentings.find(params[:id])
+end
+def check_admin
+  unless current_user && current_user.admin? 
+    redirect_to comments_path, notice: "only admin has permission"
+
+  end
+
 end
 end

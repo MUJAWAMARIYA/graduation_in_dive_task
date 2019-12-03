@@ -28,12 +28,12 @@ end
 # visit tasks_path
  # write a test to verify that the string "" testtesttest "" samplesample "is included when accessing the task list page using have_content method
  scenario "Test post creation" do
-  @post=Post.create(user_name: "web", country: "testtest")
+  @post=Post.create(user_name: "web", country: "testtest", province: "mm", district:"jj", sector:"kkk",cell:"jjj",village:"hh",telephone_number:"07855433229", gender:"male", ID_number:"1123456789087654", lost_id_date_or_found_id_date:"22-03-2019", post_reason:"jjjj", confirmation:"true", property_name:"yyy")
   assert @post
  end
 
  it "Validation does not pass if country is empty" do
-post= Post.new(user_name: 'web', country: '')
+post= Post.new(user_name: 'web', country: '', province: "mm", district:"jj", sector:"kkk",cell:"jjj",village:"hh",telephone_number:"07855433229", gender:"male", ID_number:"1123456789087654", lost_id_date_or_found_id_date:"22-03-2019", post_reason:"jjjj", confirmation:"true", property_name:"yyy")
    expect(post).not_to be_valid
  end
  
