@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_100915) do
+ActiveRecord::Schema.define(version: 2019_12_04_064738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2019_12_03_100915) do
     t.string "telephone_number"
     t.string "contact"
     t.date "lost_id_date_or_found_id_date"
+    t.string "names"
   end
 
   create_table "users", force: :cascade do |t|

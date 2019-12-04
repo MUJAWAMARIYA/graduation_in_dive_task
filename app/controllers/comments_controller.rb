@@ -7,13 +7,8 @@ class CommentsController < ApplicationController
   def index
     @comments = Comment.all
   end
-
-  
   def show
-    
   end
-
- 
   def new
     @comment = Comment.new(params[:comment])
     @comment = current_user.comments.build

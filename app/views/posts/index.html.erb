@@ -28,8 +28,9 @@ sort by
       <th>lost_id_date_or_found_id_date</th>
       <th>Post reason</th>
       <th>property_name</th>
-      <th>Confirmation</th>
     
+
+      <th>button </th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -50,7 +51,8 @@ sort by
         <td><%= post.post_reason %></td>
         <td><%= post.property_name%></td>
         <td><%= post.confirmation %></td>
-      
+
+        
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         

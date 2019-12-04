@@ -4,8 +4,6 @@ class PostsController < ApplicationController
    before_action :check_admin, only: [:destroy, :edit]
 
   def index
-  
-
     @q = Post.ransack(params[:q])
     @posts = @q.result(distinct: true).page params[:page]
 
@@ -66,7 +64,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:user_name, :country, :province, :district, :sector, :telephone_number, :gender, :ID_number, :lost_id_date_or_found_id_date, :post_reason,  :property_name,  :confirmation, :cell, :village, :user_id)
+      params.require(:post).permit(:user_name, :country, :province, :district, :sector, :telephone_number, :gender, :ID_number, :lost_id_date_or_found_id_date, :post_reason,  :property_name,  :confirmation, :cell, :village,:names, :user_id)
     end
 
     def check_admin

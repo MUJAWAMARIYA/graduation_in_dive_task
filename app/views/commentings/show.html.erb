@@ -15,10 +15,10 @@
     <%= render partial: 'commentings/index', locals: { commentings: @commentings, blog: @post } %>
   </div>
 
-  <!-- Render to display the comment field on the posts detail page -->
-  <%= render partial: 'commentings/form', locals: { commenting: @commenting, post: @post } %>
+   <!-- Render to display the comment field on the posts detail page -->
+   <%= render partial: 'commentings/form', locals: { commenting: @commenting, post: @post } %>
 
-  <%= link_to 'Edit', edit_post_path(@blog) ,class: "btn btn-danger" %> |
-  <%= link_to 'Return', posts_path ,class: "btn btn-danger" %>
+   <%= link_to 'Edit', edit_post_path(@blog) ,class: "btn btn-danger" %> |
+   <%= link_to 'Return', posts_path ,class: "btn btn-danger" %>
 </div>
 </div>
