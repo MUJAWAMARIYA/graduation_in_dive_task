@@ -1,4 +1,5 @@
-<%= form_for ([@post, @post.commentings.build]) do |f| %><%= f.text_area :content, class:"single-input", placeholder:"enter commenting"%>
+<%= form_for ([@post, @post.commentings.build]) do |f| %>
+  <%= f.text_area :content, class:"single-input", placeholder:"enter commenting"%>
   <%= f.submit "send commenting",class: "btn btn-danger"%>
   
     <%end%> 

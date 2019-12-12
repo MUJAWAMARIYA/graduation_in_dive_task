@@ -13,5 +13,9 @@
 //= require rails-ujs
 //= require activestorage
 
+/* #These two lines below 'turbolinks'
+//= require bootstrap.min
+//= require npm
+#The lines go above 'require_tree'*/
 
 //= require_tree .

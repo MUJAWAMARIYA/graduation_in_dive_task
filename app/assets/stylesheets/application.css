@@ -10,6 +10,11 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+
+ # These two lines here
+*= require bootstrap-theme.min
+*= require bootstrap.min
+# Put the lines above 'require_tree'
  *= require_tree .
  *= require_self
  */
@@ -74,12 +79,12 @@ body {
    width: 100%;
   
    font-family: fantasy;
-  
+ 
   }
   #myindex{
     background-color: skyblue;
     border-style: solid;
-  border-width: 5px;
+  border-width: 8px;
   border: 1px solid black;
   outline-style: double;
   outline-color: green;
@@ -128,6 +133,7 @@ P{
   font-size: 20px;;
   padding: 4rem;
   width: 70%;
+border-style: solid;
 }
 .show{
   
@@ -220,25 +226,27 @@ table{
 
   background-color: lightblue;
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 7s; /* Safari 4.0 - 8.0 */
     animation-name: example;
-    animation-duration: 4s;
+    animation-duration: 7s;
   }
   
   /* Safari 4.0 - 8.0 */
   @-webkit-keyframes example {
-    0%   {background-color:lightblue;}
+    0%   {background-color:red;}
     25%  {background-color: yellow;}
     50%  {background-color:burlywood;}
     100% {background-color: green;}
+
   }
   
   /* Standard syntax */
   @keyframes example {
-    0%   {background-color:lightblue;}
+    0%   {background-color:red;}
     25%  {background-color: bisque;}
     50%  {background-color:lightseagreen;}
     100% {background-color: green;}
+   
   }
   
  
